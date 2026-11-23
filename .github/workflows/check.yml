@@ -15,6 +15,12 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm test
       - run: npm run sample
+      - name: Check private upload service
+        run: |
+          mkdir -p site/.openai
+          cp site/hosting.example.json site/.openai/hosting.json
+          npm --prefix site run build
+          npm --prefix site test
       - uses: actions/upload-artifact@v4
         with:
           name: engineering-preview
