@@ -1,6 +1,6 @@
 {
   "id": "icon-blue-white",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "status": "visual-review-pending",
   "canvas": {"width": 1080, "height": 1350, "scale": 2},
   "brand": {"column": "康复小纸条", "communityLead": "向光而行", "communityName": "粉红伙伴社区"},
@@ -8,7 +8,7 @@
   "typography": {
     "title": {"family": "Noto Sans SC", "weight": 900, "size": 72, "lineHeight": 1.2, "skewDegrees": -10},
     "column": {"family": "Noto Sans SC", "weight": 700, "size": 31, "lineHeight": 1.4},
-    "introduction": {"family": "Noto Sans SC", "weight": 500, "size": 22, "lineHeight": 1.55},
+    "introduction": {"family": "Noto Sans SC", "weight": 400, "size": 24, "lineHeight": 1.5},
     "pointHeading": {"family": "Noto Sans SC", "weight": 800, "size": 32, "lineHeight": 1.4},
     "pointBody": {"family": "Noto Sans SC", "weight": 500, "size": 21, "lineHeight": 1.5},
     "number": {"family": "Roboto Condensed", "weight": 700, "style": "italic", "size": 68, "lineHeight": 1.2},
@@ -20,7 +20,7 @@
     "logo": {"x": 48, "y": 26, "width": 178, "height": 112},
     "masthead": {"x": 286, "y": 59, "width": 320, "height": 48},
     "title": {"x": 44, "y": 158, "width": 568, "height": 190},
-    "introduction": {"x": 48, "y": 398, "width": 580, "height": 83},
+    "introduction": {"x": 48, "y": 414, "width": 600, "height": 90},
     "portrait": {"x": 618, "y": 28, "width": 550, "height": 530},
     "points": {"x": 36, "y": 532, "width": 990, "height": 492},
     "reminder": {"x": 16, "y": 1077, "width": 1020, "height": 155},
