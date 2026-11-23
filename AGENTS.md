@@ -1,7 +1,8 @@
 # 工具维护与生产约定
 
 - 本仓库独立于Pink Bloom旧工具。固定蓝白母版；每期只输入已确认文案、期数和处理好的肖像，使用固定品牌原文件。
-- 先读README、docs/workflow.md和docs/typography.md。图片字体选型是视觉近似，不声称精确识别原字体。
+- 先读README、docs/approved-master.v1.md、docs/workflow.md和docs/typography.md。当前默认是用户已确认的蓝白母版V1（工具v0.1.4），图片字体选型是视觉近似，不声称精确识别原字体。
+- 固定采用footer-arcs.v1.svg的低位四色大圆弧、连续浅蓝环带、收齐斜边的偶数行浅蓝底、独立居中的提醒栏盾牌、24px/400无加粗引导语；gentle-mobility使用hand-move.v1.svg。早期山峦/细波浪与旧活动图标仅留追溯，日常不得改回。更换主题只按语义选已登记图标。
 - 正文通过真实HTML文字渲染，不把文案交给图片生成模型绘制；不得静默删减、重排、截断、缩小字号。
 - 日常不得修改config/master.v1.json、模板或source以适配某一期；超容量报告具体区域，回到文案确认或另行维护母版。
 - 使用Node24、npm ci和锁定Playwright浏览器。生产不要运行seal以绕过源码摘要错误。

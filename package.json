@@ -1,6 +1,6 @@
 {
   "name": "icon-card-studio",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "固定蓝白母版的患者知识卡片云端排版工具",
   "scripts": {
     "render": "node scripts/cli.mjs",

@@ -2,11 +2,12 @@
 
 固定蓝白母版的「康复小纸条」排版工具。输入本期文案和处理好的肖像，使用本地真实字体生成 **2160×2700 PNG、预览、检查报告和复现包**。
 
-当前版本：`0.1.3`。版式与字体已实现，**首版视觉验收待完成**；用户上传的原始 ICON Logo 已原样接入并登记摘要。工具不是字体识别器，不把近似字体声称为原图字体。
+当前版本：`0.1.4`。**蓝白固定母版 V1 已由用户确认，作为日常出图默认规范。** 最新集中说明见[已确认母版规范](docs/approved-master.v1.md)，确认记录保存在config/master.v1.json。用户上传的原始ICON Logo已原样接入并登记摘要。字体采用已确认的开源近似方案，不声称识别出了参考图的原字体。
 
 ## 日常入口
 
 - [私有 Logo 上传页面](https://icon-card-assets-zamzheng.mutedmixer64.chatgpt.site)
+- [已确认母版规范：色块、背景、图标与字体](docs/approved-master.v1.md)
 - [字体分析与选择](docs/typography.md)
 - [母版拆解](docs/master.md)
 - [GPT / Notion 操作流程](docs/workflow.md)
