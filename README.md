@@ -2,7 +2,7 @@
 
 固定蓝白母版的「康复小纸条」排版工具。输入本期文案和处理好的肖像，使用本地真实字体生成 **2160×2700 PNG、预览、检查报告和复现包**。
 
-当前版本：`0.1.0`。版式与字体已实现，**首版视觉验收待完成**；原始 ICON Logo 通过私有素材库上传后导入。工具不是字体识别器，不把近似字体声称为原图字体。
+当前版本：`0.1.0`。版式与字体已实现，**首版视觉验收待完成**；用户上传的原始 ICON Logo 已原样接入并登记摘要。工具不是字体识别器，不把近似字体声称为原图字体。
 
 ## 日常入口
 
@@ -25,15 +25,17 @@ npm run setup:browser
 
 受限云环境可设置 `npm_config_cache=/tmp/icon-card-npm`、`PLAYWRIGHT_BROWSERS_PATH=/tmp/icon-card-browsers`。这些是运行环境设置，无需修改母版。
 
-## 接入一次 Logo
+## 固定 Logo
 
-上传页面仅保存品牌原文件，不自动修改 GitHub。上传后，执行者通过授权的私有站点访问取得原文件，在本次运行环境导入：
+当前固定Logo为用户上传的原文件 `assets/brand/icon-logo.v1.png`，随工具包保存并由摘要锁保护。日常出图无需再次上传或访问素材站点。上传页面用于接收未来候选；更换长期品牌标准需另行发布资产版本。
+
+如需在单次运行环境测试另一个明确指定的Logo，可执行：
 
 ```bash
 npm run import:logo -- --input /tmp/run/icon-logo.png
 ```
 
-原文件字节和 SHA-256 保留，Logo 不重新绘制。导入文件默认不提交 GitHub；同一素材可在每次云任务中取回并导入。PNG、JPEG、WebP 均可使用。当前不支持直接导入 SVG。
+原文件字节和 SHA-256 保留，Logo 不重新绘制。临时导入文件默认不提交GitHub；当前已确认采用的固定v1资产随工具包分发。PNG、JPEG、WebP 均可使用。当前不支持直接导入 SVG。
 
 ## 每期生产
 
@@ -44,7 +46,7 @@ npm run preview -- --input /tmp/run/content.json --portrait /tmp/run/portrait.pn
 npm run render -- --input /tmp/run/content.json --portrait /tmp/run/portrait.png --output /tmp/run/card.png
 ```
 
-也可用 `--logo /tmp/run/icon-logo.png` 显式传入本次取得的固定品牌资产。肖像路径可写在文案的 `portrait.file`，相对文案 JSON 所在目录解析。可选 `positionX / positionY` 为 0–100 的裁切焦点百分比，默认中心；原图不被改写。
+默认使用工具包内固定Logo。测试时也可用 `--logo /tmp/run/icon-logo.png` 显式传入素材，报告会记录实际摘要。肖像路径可写在文案的 `portrait.file`，相对文案 JSON 所在目录解析。可选 `positionX / positionY` 为 0–100 的裁切焦点百分比，默认中心；原图不被改写。
 
 `render` 先保存自包含预览与报告，再在检查通过后写入 PNG。报告包含实际字体、素材摘要、内容完整性、区域位置、运行环境与审核状态。正式 PNG 失败时不覆盖此前成功文件。
 

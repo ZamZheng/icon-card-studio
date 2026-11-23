@@ -8,5 +8,6 @@ site/dist/
 site/.wrangler/
 site/.openai/
 assets/brand/icon-logo.*
+!assets/brand/icon-logo.v1.png
 assets/brand/identity.local.json
 runtime/

@@ -95,7 +95,7 @@ export async function render({input,output,logo,portrait,preview=false,diagnosti
         if(Math.min(ra.right,rb.right)-Math.max(ra.left,rb.left)>1&&Math.min(ra.bottom,rb.bottom)-Math.max(ra.top,rb.top)>1)errors.push({region:a.dataset.region,type:'text-collision',detail:`与${b.dataset.region}文字重叠`});
       }
       const p=regions.portrait,cx=p.x+p.width/2,cy=p.y+p.height/2;
-      for(const el of nodes){if([...el.querySelectorAll('[data-region]')].length)continue;const r=textBounds(el),nx=Math.max(r.left,Math.min(cx,r.right)),ny=Math.max(r.top,Math.min(cy,r.bottom));if(((nx-cx)/(p.width/2))**2+((ny-cy)/(p.height/2))**2<.98)errors.push({region:el.dataset.region,type:'portrait-collision',detail:'文字进入人物框，请减少本区文案或由维护者调整母版'});}
+      for(const el of nodes){if([...el.querySelectorAll('[data-region]')].length)continue;const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let node,collision=false;while((node=walker.nextNode())&&!collision){for(let i=0;i<node.length;i++){if(/\s/.test(node.textContent[i]))continue;const range=document.createRange();range.setStart(node,i);range.setEnd(node,i+1);const r=range.getBoundingClientRect(),nx=Math.max(r.left,Math.min(cx,r.right)),ny=Math.max(r.top,Math.min(cy,r.bottom));if(((nx-cx)/(p.width/2))**2+((ny-cy)/(p.height/2))**2<.98){collision=true;break;}}}if(collision)errors.push({region:el.dataset.region,type:'portrait-collision',detail:'文字进入人物框，请减少本区文案或由维护者调整母版'});}
       return {errors,metrics};
     },{capacity:master.capacity,regions:master.regions});
     const cdp=await context.newCDPSession(page);await cdp.send('DOM.enable');await cdp.send('CSS.enable');const {root}=await cdp.send('DOM.getDocument');const actualFonts={};
@@ -125,6 +125,6 @@ export async function render({input,output,logo,portrait,preview=false,diagnosti
 }
 async function installedLogo(){
   const file=path.join(ROOT,'assets/brand/identity.local.json');let config;
-  try{config=await json(file);}catch(e){if(e.code==='ENOENT')return null;throw e;}
+  try{config=await json(file);}catch(e){if(e.code!=='ENOENT')throw e;try{config=await json(path.join(ROOT,'assets/brand/identity.v1.json'));}catch(e2){if(e2.code==='ENOENT')return null;throw e2;}}
   const source=await imageFile(path.join(ROOT,'assets/brand',config.file));if(source.sha256!==config.sha256)throw Error('已导入Logo原文件被修改，请重新导入');return source;
 }
