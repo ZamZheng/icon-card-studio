@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "issue": 0,
+  "title": "每天读一点，\n把日常记下来",
+  "titleEmphasis": ["日常"],
+  "introduction": "这是一份通用工程样张，用于检查字体与排版。\n记录清楚的事情，让下一次查找更轻松。",
+  "introductionEmphasis": ["记录清楚的事情"],
+  "points": [
+    {"heading": "把想法及时记下来", "body": "先记下关键词，再补充完整句子。\n保留原始材料，方便之后回顾。", "iconId": "general-info"},
+    {"heading": "为事情留一个日期", "body": "使用明确日期整理记录。\n按时间寻找材料，会更方便。", "iconId": "calendar"},
+    {"heading": "给每份材料起好名字", "body": "名称清楚、层级一致，查找更省力。\n内容更新时保留版本说明。", "iconId": "professional-guidance"},
+    {"heading": "整理成可以复用的记录", "body": "把定稿和原始材料分别保存。\n需要修改时，从已确认版本继续。", "iconId": "general-info"}
+  ],
+  "reminder": "本图仅用于验证排版工具，不包含医学建议。\n正式生产请使用已确认文案和可用肖像。",
+  "reviewStatus": "not_applicable"
+}

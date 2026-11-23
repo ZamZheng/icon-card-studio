@@ -1,0 +1,11 @@
+{
+  "shoulder-arm": {"file": "shoulder-arm.svg", "semantics": ["肩臂活动", "肩膀紧绷"]},
+  "professional-guidance": {"file": "professional-guidance.svg", "semantics": ["专业指导", "医护评估"]},
+  "gentle-mobility": {"file": "gentle-mobility.svg", "semantics": ["轻柔活动", "动作范围"]},
+  "daily-dressing": {"file": "daily-dressing.svg", "semantics": ["穿衣", "日常动作"]},
+  "calendar": {"file": "calendar.svg", "semantics": ["恢复时间"]},
+  "water-drop": {"file": "water-drop.svg", "semantics": ["温柔清洁"]},
+  "skin-care": {"file": "skin-care.svg", "semantics": ["保湿护理"]},
+  "sun-protection": {"file": "sun-protection.svg", "semantics": ["阳光防护"]},
+  "general-info": {"file": "general-info.svg", "semantics": ["通用提醒"]}
+}

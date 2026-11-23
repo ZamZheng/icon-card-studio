@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "files": {
+    "assets/brand/signature.svg": "1256c5bbaf6f9c1cfb70ba17b9dd1c5b2e633b38995b318ef818169dd9b4338b",
+    "assets/icons/calendar.svg": "4efcaaa4ad78e23a2fbd4a7f66d0201135a060d466631a8a6bbfd18566c9ceaf",
+    "assets/icons/daily-dressing.svg": "5c0e3a90038019c05ffb65962fa593908e9a2d33e519fc6da482dee3eb22273e",
+    "assets/icons/general-info.svg": "89fec56b3cc2c1d9e2d9f82e7a5977b51936a2a0076caf7ee8b16e44ac552842",
+    "assets/icons/gentle-mobility.svg": "7d5a0c4cbc7a40f5f007280cbb4963a6f732b04077a70e35d786c71bba1341bd",
+    "assets/icons/professional-guidance.svg": "1674f5142e87fdc64c7b6228723fc4e49035a4c37b4f6884c52507d9736e24c1",
+    "assets/icons/shield.svg": "a5b3f8c215b9a5482c740546461cd59c205b367ffb720788234ea7e54cffb5f1",
+    "assets/icons/shoulder-arm.svg": "90a5d63461b262a72e67c665d751a8b5654ff250ee5d570758313966280c1911",
+    "assets/icons/skin-care.svg": "857ba24c599e9e132877df24ae07fba896dff1ebfb596bb3b3cfe1c34843cd3e",
+    "assets/icons/sun-protection.svg": "1dcd4bd8f91d3b2e35f11cf866a1e36a78cd36794ca31d449dd6304387b2fbe1",
+    "assets/icons/water-drop.svg": "e9cf7ac530bae82448f3df79114cc8d4d8c3effa68ae4950ae784a661224675f",
+    "config/icons.json": "4a76df75314a5c2dc36e2de7440f4f455d3d7358d96f69f4c5f4f92190113015",
+    "config/master.v1.json": "093640568edb637f89c1481d27ae3ff7967e844480d3c656fdbdf58eb9a60799",
+    "package-lock.json": "9577b8d16b6ada10831c8020d437f9c61e25705debd54cb29fdfa83feaf4b703",
+    "src/content.mjs": "dc948120b589b88fefc41de280440e67eed60df81adfe8c123ad0a7ef102fed4",
+    "src/files.mjs": "f6c5963deb079c0f94e222ec943337f59f2338427315f3f352c32c975d60cab7",
+    "src/fonts.mjs": "ddf5b4bbbb85d63c3fbe30b9a2a746a7a2e3d56a471f28779f96e495bcfda6ae",
+    "src/render.mjs": "acf96bd7551d564cd2c170be0e0fd8a56bfa5f93140419f420141fad1932a739",
+    "template/card.css": "0cdc8e88a454b75a5ae8369b9cb031d41e6d06aae9fcb293d77e1c84ff6838f6",
+    "template/card.html": "2d22ff5c2a284411d74c6d39b7649a0e351868a4a29165cef2d16e6dbb27f17b"
+  }
+}
