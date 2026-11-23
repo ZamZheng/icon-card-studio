@@ -43,7 +43,7 @@ export async function render({input,output,logo,portrait,preview=false,diagnosti
     const iconMarkup=await Promise.all(icons.map(async i=>({...i,svg:await readFile(path.join(ROOT,'assets/icons',i.file),'utf8')})));
     const signature=await readFile(path.join(ROOT,'assets/brand/signature.svg'),'utf8');
     const shield=await readFile(path.join(ROOT,'assets/icons/shield.svg'),'utf8');
-    const footerWaves=await readFile(path.join(ROOT,'assets/backgrounds/footer-mountains.v1.svg'),'utf8');
+    const footerWaves=await readFile(path.join(ROOT,'assets/backgrounds/footer-arcs.v1.svg'),'utf8');
     await page.setContent(await readFile(path.join(ROOT,'template/card.html'),'utf8'));
     await page.addStyleTag({content:css});
     await page.evaluate(({data,master,icons,signature,shield,footerWaves,logo,portrait,diagnostic})=>{

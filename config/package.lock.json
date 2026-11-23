@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "files": {
+    "assets/backgrounds/footer-arcs.v1.svg": "d7b4e24384e4a5c650c1813646806313293c9d11640a18ff2b3919da0d56fb34",
     "assets/backgrounds/footer-mountains.v1.svg": "538d1bd96d1a07fe5ee5a3738acc82337f3934ce9d364d7e17ec69e4be654f00",
     "assets/backgrounds/footer-waves.v1.svg": "a27a9f18e4ae00656d8d4a17f130903b7e592297177deccdc7358a90a01e2705",
     "assets/brand/icon-logo.v1.png": "bce3f3815c111355da9853d91d0e2719b46dca2c5e7bbc7456587ab71c8b1ad5",
@@ -19,12 +20,12 @@
     "assets/icons/sun-protection.svg": "1dcd4bd8f91d3b2e35f11cf866a1e36a78cd36794ca31d449dd6304387b2fbe1",
     "assets/icons/water-drop.svg": "e9cf7ac530bae82448f3df79114cc8d4d8c3effa68ae4950ae784a661224675f",
     "config/icons.json": "c1b56dcd3ff591a78aaebed872f64f09cd7d52a4ad34860c882fb86f7830c356",
-    "config/master.v1.json": "87e90e98d3e306e440fe758e8408d48344116b5adc5ba9d1a42f0b4988d814a8",
-    "package-lock.json": "8f0ffbeafa6d759fe696cccb3c63d8330dbb437120e3333026b12614a16f164e",
+    "config/master.v1.json": "e755ed5b79176fbca781cacfa42adcde61dbde67d7fca9007361d6b108a0a873",
+    "package-lock.json": "13b9a391ded0cef4ffa085a18c3be2e74e1505e7825837e6a2993fd23a99fbb7",
     "src/content.mjs": "dc948120b589b88fefc41de280440e67eed60df81adfe8c123ad0a7ef102fed4",
     "src/files.mjs": "f6c5963deb079c0f94e222ec943337f59f2338427315f3f352c32c975d60cab7",
     "src/fonts.mjs": "ddf5b4bbbb85d63c3fbe30b9a2a746a7a2e3d56a471f28779f96e495bcfda6ae",
-    "src/render.mjs": "16915d3edd6e9a4a8f3d7fd56517b873e8506b557f2f12d44e9f74b61196964e",
+    "src/render.mjs": "9ec3d74c0229b65adcf1ec210ad94d2272a0454e2861b493c04a9de1be7d7b29",
     "template/card.css": "0891213298e432e5c96c3faf6ac4a987ae92f71c42fa11e22c587354bef55c72",
     "template/card.html": "790488e5d1f6351d390a4eff23bb7a9e89269df03f67a8cfea468679b78ac467"
   }
