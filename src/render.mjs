@@ -43,15 +43,17 @@ export async function render({input,output,logo,portrait,preview=false,diagnosti
     const iconMarkup=await Promise.all(icons.map(async i=>({...i,svg:await readFile(path.join(ROOT,'assets/icons',i.file),'utf8')})));
     const signature=await readFile(path.join(ROOT,'assets/brand/signature.svg'),'utf8');
     const shield=await readFile(path.join(ROOT,'assets/icons/shield.svg'),'utf8');
+    const footerWaves=await readFile(path.join(ROOT,'assets/backgrounds/footer-waves.v1.svg'),'utf8');
     await page.setContent(await readFile(path.join(ROOT,'template/card.html'),'utf8'));
     await page.addStyleTag({content:css});
-    await page.evaluate(({data,master,icons,signature,shield,logo,portrait,diagnostic})=>{
+    await page.evaluate(({data,master,icons,signature,shield,footerWaves,logo,portrait,diagnostic})=>{
       const el=id=>document.getElementById(id);
       function fill(node,text,phrases=[]){let cursor=0;for(const {phrase,index} of phrases.map(phrase=>({phrase,index:text.indexOf(phrase)})).sort((a,b)=>a.index-b.index)){node.append(document.createTextNode(text.slice(cursor,index)));const span=document.createElement('span');span.className='emphasis';span.textContent=phrase;node.append(span);cursor=index+phrase.length;}node.append(document.createTextNode(text.slice(cursor)));}
       el('column').textContent=master.brand.column;el('issue').textContent='NO.'+String(data.issue).padStart(3,'0');
       fill(el('title'),data.title,data.titleEmphasis);fill(el('introduction'),data.introduction,data.introductionEmphasis);
       el('reminder').textContent=data.reminder;el('community-lead').textContent=master.brand.communityLead;el('community-name').textContent=master.brand.communityName;
       el('signature-symbol').innerHTML=signature;el('reminder-icon').innerHTML=shield;
+      el('footer-waves').innerHTML=footerWaves;
       if(logo)el('logo').src=logo;else el('logo').remove();
       if(portrait){el('portrait').src=portrait;el('portrait').style.objectPosition=`${data.portrait?.positionX??50}% ${data.portrait?.positionY??50}%`;}else el('portrait').remove();
       if(diagnostic)el('diagnostic-watermark').hidden=false;
@@ -64,7 +66,7 @@ export async function render({input,output,logo,portrait,preview=false,diagnosti
         const b=document.createElement('p');b.className='point-body';b.dataset.role='pointBody';b.dataset.region=`知识点${i+1}正文`;b.textContent=p.body;
         group.append(h,b);li.append(n,icon,group);el('points').append(li);
       });
-    },{data,master,icons:iconMarkup,signature,shield,logo:logoSource?.url,portrait:portraitSource?.url,diagnostic});
+    },{data,master,icons:iconMarkup,signature,shield,footerWaves,logo:logoSource?.url,portrait:portraitSource?.url,diagnostic});
     await page.evaluate(async()=>{
       for(const el of document.querySelectorAll('[data-role],#masthead')){const s=getComputedStyle(el);await document.fonts.load(`${s.fontStyle} ${s.fontWeight} ${s.fontSize} ${s.fontFamily}`,el.textContent);for(const span of el.querySelectorAll('.emphasis')){const p=getComputedStyle(span);await document.fonts.load(`${p.fontStyle} ${p.fontWeight} ${p.fontSize} ${p.fontFamily}`,span.textContent);}}
       await document.fonts.ready;await Promise.all([...document.images].map(async i=>{await i.decode();if(!i.naturalWidth)throw Error('图片解码失败');}));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
