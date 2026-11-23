@@ -11,7 +11,7 @@ npm run build
 npm test
 ```
 
-Worker输出为dist/server/index.js。上传内容保存R2的BUCKET绑定，元数据在brand/current.json，历史原文件按SHA-256留存。原文件候选不自动写入GitHub或替换工具固定Logo。
+Worker输出为dist/server/index.js。上传内容保存R2的BUCKET绑定，品牌元数据在brand/current.json，肖像元数据在portrait/current.json，各自原文件按SHA-256留存、互不覆盖。肖像入口为/?asset=portrait。原文件候选不自动写入GitHub或替换工具固定Logo。
 
 项目不使用用户Token或密钥作为源文件；平台负责ChatGPT登录保护。POST要求真实用户身份和同源Origin，GET由私有Site访问边界保护；服务访问与浏览器身份分开授权。
 
